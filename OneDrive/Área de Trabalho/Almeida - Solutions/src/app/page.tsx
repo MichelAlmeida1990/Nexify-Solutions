@@ -1,14 +1,13 @@
 import React from 'react'
 import Hero from '@/components/sections/hero'
-import About from '@/components/sections/about'
 import Services from '@/components/sections/services'
 import Portfolio from '@/components/sections/portfolio'
-import Testimonials from '@/components/sections/testimonials'
+import About from '@/components/sections/about'
 import Contact from '@/components/sections/contact'
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main>
       <Hero
         title="Transforme seu negócio com soluções digitais inovadoras"
         subtitle="Nexify Solutions"
@@ -18,10 +17,9 @@ export default function Home() {
         secondaryCtaText="Fale conosco"
         secondaryCtaHref="#contact"
       />
-      <About />
       <Services />
       <Portfolio />
-      <Testimonials />
+      <About />
       <Contact />
     </main>
   )

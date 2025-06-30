@@ -9,9 +9,9 @@ export const SITE_CONFIG = {
     email: 'contato@nexify-solutions.com',
   },
   contact: {
-    email: 'michel.almeida@example.com',
-    phone: '+55 (11) 99999-9999',
-    whatsapp: '+5511999999999',
+    email: 'michelpaulo06@hotmail.com',
+    phone: '+55 (11) 95940-7653',
+    whatsapp: '+5511959407653',
   },
 } as const
 
@@ -266,36 +266,6 @@ export const SKILLS = {
   ],
 } as const
 
-export const TESTIMONIALS = [
-  {
-    id: 1,
-    name: 'João Silva',
-    role: 'Diretor de Tecnologia',
-    company: 'TechCorp',
-    content: 'Michel desenvolveu um sistema de gestão escolar que revolucionou nossa instituição. A interface é intuitiva e o sistema é muito robusto.',
-    avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
-    rating: 5,
-  },
-  {
-    id: 2,
-    name: 'Maria Santos',
-    role: 'Proprietária',
-    company: 'Academia FitLife',
-    content: 'O aplicativo da academia superou todas as expectativas. Nossos alunos adoram a facilidade de agendar aulas e acompanhar o progresso.',
-    avatar: 'https://randomuser.me/api/portraits/women/44.jpg',
-    rating: 5,
-  },
-  {
-    id: 3,
-    name: 'Carlos Oliveira',
-    role: 'CEO',
-    company: 'StartupXYZ',
-    content: 'Michel é um profissional excepcional. Entregou nosso projeto no prazo, com qualidade superior e sempre disponível para ajustes.',
-    avatar: 'https://randomuser.me/api/portraits/men/65.jpg',
-    rating: 5,
-  },
-] as const
-
 export const SOCIAL_LINKS = [
   {
     name: 'GitHub',
@@ -335,4 +305,40 @@ export const ANIMATION_VARIANTS = {
     animate: { opacity: 1, scale: 1 },
     exit: { opacity: 0, scale: 0.9 },
   },
+} as const
+
+export const ABOUT_DATA = {
+  story: 'Olá! Sou Michel Almeida, um desenvolvedor Full Stack apaixonado por tecnologia e inovação. Desde 2020, tenho ajudado empresas a transformar suas ideias em soluções digitais que fazem a diferença no mercado. Minha missão é criar experiências excepcionais que conectam pessoas e impulsionam negócios através da tecnologia.',
+  values: [
+    {
+      title: 'Inovação',
+      description: 'Sempre busco as melhores tecnologias e metodologias para entregar soluções de ponta.'
+    },
+    {
+      title: 'Qualidade',
+      description: 'Comprometimento total com a excelência em cada projeto, desde o planejamento até a entrega.'
+    },
+    {
+      title: 'Transparência',
+      description: 'Comunicação clara e honesta em todas as etapas do desenvolvimento.'
+    },
+    {
+      title: 'Resultados',
+      description: 'Foco em entregar valor real e resultados mensuráveis para meus clientes.'
+    }
+  ],
+  stats: [
+    { value: '50+', label: 'Projetos Entregues' },
+    { value: '30+', label: 'Clientes Satisfeitos' },
+    { value: '3+', label: 'Anos de Experiência' },
+    { value: '100%', label: 'Compromisso com Qualidade' }
+  ],
+  profile: {
+    name: 'Michel Almeida',
+    role: 'Full Stack Developer',
+    bio: 'Especialista em React, Node.js, Python e desenvolvimento de aplicações web e mobile. Apaixonado por criar soluções inovadoras que resolvem problemas reais e impulsionam o crescimento dos negócios.',
+    avatar: '/images/foto-perfil.png.jpeg',
+    skills: ['React', 'Next.js', 'Node.js', 'Python', 'TypeScript', 'PostgreSQL', 'MongoDB', 'React Native'],
+    experience: '3+ anos desenvolvendo soluções digitais completas, desde sistemas de gestão até aplicativos mobile.'
+  }
 } as const 
