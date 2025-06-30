@@ -1,10 +1,12 @@
 'use client'
 
-import React, { useRef } from 'react'
+import React, { useCallback, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import { Button } from '@/components/ui/button'
 import { HeroProps } from '@/types'
+import { loadSlim } from 'tsparticles-slim'
+import { Engine } from 'tsparticles-engine'
 import { Typewriter } from 'react-simple-typewriter'
 
 const Hero: React.FC<HeroProps> = ({
@@ -21,10 +23,29 @@ const Hero: React.FC<HeroProps> = ({
     threshold: 0.1,
   })
 
+  const particlesRef = useRef<any>(null)
+
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadSlim(engine)
+  }, [])
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href)
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
+  // Função para gerar partículas extras ao clicar na estrela
+  const handleStarClick = () => {
+    if (particlesRef.current) {
+      particlesRef.current.loadParticlesOptions({
+        particles: {
+          number: { value: 120 },
+          move: { speed: 2 },
+          color: { value: ['#fbbf24', '#f472b6', '#60a5fa', '#a78bfa'] },
+        },
+      })
     }
   }
 

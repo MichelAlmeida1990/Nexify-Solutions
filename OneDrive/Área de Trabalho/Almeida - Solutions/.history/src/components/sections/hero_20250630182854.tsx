@@ -21,6 +21,8 @@ const Hero: React.FC<HeroProps> = ({
     threshold: 0.1,
   })
 
+  const particlesRef = useRef<any>(null)
+
   const scrollToSection = (href: string) => {
     const element = document.querySelector(href)
     if (element) {

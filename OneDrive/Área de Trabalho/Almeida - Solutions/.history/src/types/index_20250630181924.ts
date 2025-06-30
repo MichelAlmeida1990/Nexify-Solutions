@@ -131,7 +131,7 @@ export interface TextareaProps {
   label?: string
   placeholder?: string
   value?: string
-  onChange?: ((value: string) => void) | ((e: React.ChangeEvent<HTMLTextAreaElement>) => void)
+  onChange?: (value: string) => void
   error?: string
   required?: boolean
   disabled?: boolean

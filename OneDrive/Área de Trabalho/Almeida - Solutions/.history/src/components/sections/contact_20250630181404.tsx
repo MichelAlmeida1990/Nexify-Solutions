@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
+import { smoothScrollTo } from '@/lib/utils'
 import { useEmailJS } from '@/hooks/use-emailjs'
 import { LoadingSpinner } from '@/components/ui/loading-spinner'
 
@@ -91,6 +92,10 @@ const Contact: React.FC = () => {
       // Reset error message after 5 seconds
       setTimeout(() => setSubmitError(null), 5000)
     }
+  }
+
+  const scrollToContact = () => {
+    smoothScrollTo('#contact', 80) // 80px offset para o header
   }
 
   return (
