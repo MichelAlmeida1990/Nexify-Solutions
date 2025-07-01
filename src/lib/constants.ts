@@ -117,7 +117,7 @@ export const PORTFOLIO_PROJECTS = [
     category: 'mobile-apps',
     technologies: ['JavaScript', 'React Native', 'Firebase', 'Node.js'],
     image: '/images/modelo-de-aplicativo-de-fitness-de-design-plano.png',
-    demoUrl: 'https://app-academia-demo.vercel.app',
+    demoUrl: 'https://michelalmeida1990.github.io/App-de-academia/',
     githubUrl: 'https://github.com/MichelAlmeida1990/App-de-academia',
     features: [
       'Controle de treinos personalizados',
@@ -140,7 +140,7 @@ export const PORTFOLIO_PROJECTS = [
     category: 'system-integration',
     technologies: ['JavaScript', 'React', 'Node.js', 'MongoDB'],
     image: '/images/banco-horas.png',
-    demoUrl: 'https://banco-horas-demo.vercel.app',
+    demoUrl: 'https://michelalmeida1990.github.io/Sistema-de-Banco-de-Horas/',
     githubUrl: 'https://github.com/MichelAlmeida1990/Sistema-de-Banco-de-Horas',
     features: [
       'Controle de ponto eletrônico',
@@ -186,7 +186,7 @@ export const PORTFOLIO_PROJECTS = [
     category: 'web-development',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     image: '/images/barbearia.png',
-    demoUrl: 'https://barbearia-do-di-demo.vercel.app',
+    demoUrl: 'https://barbearia-do-di.vercel.app',
     githubUrl: 'https://github.com/MichelAlmeida1990/Barbearia-do-Di',
     features: [
       'Catálogo de cortes',
@@ -207,7 +207,7 @@ export const PORTFOLIO_PROJECTS = [
     category: 'web-development',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     image: '/images/santo-drink.png',
-    demoUrl: 'https://santo-drink-site-demo.vercel.app',
+    demoUrl: 'https://michelalmeida1990.github.io/SITE-DE-BEBIDAS-DO-SANTO/',
     githubUrl: 'https://github.com/MichelAlmeida1990/santo-drink-site',
     features: [
       'Catálogo de drinks',
