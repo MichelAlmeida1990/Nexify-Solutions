@@ -1,94 +1,91 @@
-# Configuração do EmailJS
+# 📧 Configuração do EmailJS
 
-Este guia explica como configurar o EmailJS para envio real de e-mails através do formulário de contato.
+## Status Atual
+✅ **Hook implementado** - `useEmailJS` está funcionando  
+✅ **Formulário integrado** - Campo de telefone adicionado  
+❌ **Credenciais pendentes** - Precisa configurar EmailJS  
 
-## Passo 1: Criar conta no EmailJS
+## 🚀 Como Configurar o EmailJS
 
+### 1. Criar Conta no EmailJS
 1. Acesse [https://www.emailjs.com/](https://www.emailjs.com/)
-2. Clique em "Sign Up" e crie uma conta gratuita
-3. Faça login na sua conta
+2. Crie uma conta gratuita
+3. Faça login no dashboard
 
-## Passo 2: Configurar um serviço de e-mail
-
-1. No dashboard do EmailJS, vá para "Email Services"
-2. Clique em "Add New Service"
-3. Escolha seu provedor de e-mail (Gmail, Outlook, etc.)
-4. Siga as instruções para conectar sua conta
+### 2. Configurar Serviço de Email
+1. No dashboard, vá em **"Email Services"**
+2. Clique em **"Add New Service"**
+3. Escolha seu provedor de email (Gmail, Outlook, etc.)
+4. Configure a autenticação
 5. Anote o **Service ID** gerado
 
-## Passo 3: Criar um template de e-mail
-
-1. Vá para "Email Templates"
-2. Clique em "Create New Template"
-3. Use o seguinte template:
+### 3. Criar Template de Email
+1. Vá em **"Email Templates"**
+2. Clique em **"Create New Template"**
+3. Use este template:
 
 ```html
-Olá Michel,
+<h2>Nova Mensagem de Contato - Nexify Solutions</h2>
 
-Você recebeu uma nova mensagem de contato do seu portfólio:
+<p><strong>Nome:</strong> {{name}}</p>
+<p><strong>Email:</strong> {{email}}</p>
+<p><strong>Telefone:</strong> {{phone}}</p>
+<p><strong>Assunto:</strong> {{subject}}</p>
 
-Nome: {{name}}
-Email: {{email}}
-Telefone: {{phone}}
-Assunto: {{subject}}
+<h3>Mensagem:</h3>
+<p>{{message}}</p>
 
-Mensagem:
-{{message}}
-
----
-Enviado através do formulário de contato do portfólio.
+<hr>
+<p><em>Enviado através do formulário de contato do portfólio Nexify Solutions.</em></p>
 ```
 
-4. Salve o template e anote o **Template ID**
+4. Anote o **Template ID** gerado
 
-## Passo 4: Obter o User ID
+### 4. Obter User ID
+1. Vá em **"Account"** → **"API Keys"**
+2. Copie o **Public Key**
 
-1. Vá para "Account" > "API Keys"
-2. Copie o **Public Key** (User ID)
-
-## Passo 5: Configurar no projeto
-
-1. Abra o arquivo `src/lib/emailjs-config.ts`
-2. Substitua os valores pelos seus IDs:
+### 5. Configurar no Projeto
+Edite o arquivo `src/lib/emailjs-config.ts`:
 
 ```typescript
 export const EMAILJS_CONFIG = {
-  USER_ID: 'seu_user_id_aqui',
-  TEMPLATE_ID: 'seu_template_id_aqui',
-  SERVICE_ID: 'seu_service_id_aqui',
-}
+  USER_ID: 'SEU_PUBLIC_KEY_AQUI',
+  SERVICE_ID: 'SEU_SERVICE_ID_AQUI', 
+  TEMPLATE_ID: 'SEU_TEMPLATE_ID_AQUI',
+} as const
 ```
 
-## Passo 6: Testar
-
+### 6. Testar
 1. Execute `npm run dev`
-2. Acesse o formulário de contato
-3. Preencha e envie uma mensagem de teste
-4. Verifique se o e-mail foi recebido
+2. Acesse a seção de contato
+3. Preencha e envie um formulário de teste
+4. Verifique se o email foi recebido
 
-## Limites gratuitos
+## 🔧 Variáveis do Template
+- `{{name}}` - Nome do remetente
+- `{{email}}` - Email do remetente  
+- `{{phone}}` - Telefone do remetente
+- `{{subject}}` - Assunto da mensagem
+- `{{message}}` - Conteúdo da mensagem
 
-- **200 e-mails por mês** no plano gratuito
-- **2 templates** de e-mail
-- **1 serviço** de e-mail
+## 📊 Limites Gratuitos
+- **200 emails/mês** no plano gratuito
+- **2 templates** simultâneos
+- **1 serviço de email**
 
-## Solução de problemas
+## 🚨 Troubleshooting
+- **Erro 400**: Verifique se as credenciais estão corretas
+- **Erro 403**: Verifique se o template existe e está ativo
+- **Email não chega**: Verifique spam e configurações do provedor
 
-### Erro: "EmailJS não está configurado"
-- Verifique se os IDs estão corretos em `emailjs-config.ts`
-
-### Erro: "Service not found"
-- Verifique se o Service ID está correto
-- Certifique-se de que o serviço está ativo
-
-### Erro: "Template not found"
-- Verifique se o Template ID está correto
-- Certifique-se de que o template está publicado
-
-### E-mails não chegam
-- Verifique a pasta de spam
-- Confirme se o serviço de e-mail está configurado corretamente
-- Teste com um e-mail diferente
+## ✅ Checklist de Configuração
+- [ ] Conta EmailJS criada
+- [ ] Serviço de email configurado
+- [ ] Template criado com variáveis corretas
+- [ ] Credenciais atualizadas no `emailjs-config.ts`
+- [ ] Teste de envio realizado
+- [ ] Email recebido com sucesso
 
 ## Alternativas
 
