@@ -75,8 +75,8 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
               className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           isScrolled
-            ? 'bg-gradient-to-r from-blue-900/90 via-purple-900/90 to-indigo-900/90 backdrop-blur-md border-b border-blue-500/30 shadow-xl'
-            : 'bg-gradient-to-r from-blue-900/70 via-purple-900/70 to-indigo-900/70 backdrop-blur-sm',
+            ? 'bg-gradient-to-r from-sky-500 via-cyan-400 to-emerald-400 backdrop-blur-md border-b border-cyan-300/30 shadow-xl'
+            : 'bg-gradient-to-r from-sky-500 via-cyan-400 to-emerald-400 backdrop-blur-sm',
           className
         )}
     >
@@ -174,8 +174,8 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
                 maxWidth: '320px',
                 height: '100vh',
                 zIndex: 9999,
-                background: 'linear-gradient(135deg, rgba(30,58,138,0.7), rgba(124,58,237,0.7), rgba(49,46,129,0.7))',
-                borderLeft: '2px solid rgba(99,102,241,0.3)',
+                background: 'linear-gradient(135deg, rgba(14,165,233,0.7), rgba(34,211,238,0.7), rgba(52,211,153,0.7))',
+                borderLeft: '2px solid rgba(34,211,238,0.3)',
                 borderRadius: '1rem 0 0 1rem',
                 boxShadow: '0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04)',
                 overflow: 'hidden',

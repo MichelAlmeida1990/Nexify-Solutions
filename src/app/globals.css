@@ -132,7 +132,7 @@
   }
 
   .gradient-text {
-    @apply bg-gradient-to-r from-primary via-purple-600 to-pink-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-sky-500 via-cyan-400 to-emerald-400 bg-clip-text text-transparent;
   }
 
   .shadow-soft {
@@ -258,4 +258,13 @@
 
 .animate-pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* Drawer lateral: animação correta para abrir da direita */
+.animate-slide-in { 
+  animation: slideInDrawer 0.3s cubic-bezier(0.4,0,0.2,1) both; 
+}
+@keyframes slideInDrawer { 
+  from { transform: translateX(100%); } 
+  to { transform: translateX(0); } 
 } 

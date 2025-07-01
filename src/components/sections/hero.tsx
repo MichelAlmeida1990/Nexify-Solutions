@@ -117,7 +117,7 @@ const Hero: React.FC<HeroProps> = ({
             <Button
               size="lg"
               onClick={() => scrollToSection(ctaHref)}
-              className="text-lg px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white border-0 shadow-lg"
+              className="text-lg px-8 py-4 bg-gradient-to-r from-sky-500 via-cyan-400 to-emerald-400 hover:from-sky-600 hover:to-emerald-500 text-white border-0 shadow-lg"
             >
               {ctaText}
             </Button>

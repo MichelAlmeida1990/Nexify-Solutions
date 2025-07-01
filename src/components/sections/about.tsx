@@ -109,7 +109,7 @@ const About: React.FC = () => {
                     alt={ABOUT_DATA.profile.name}
                     className="w-64 h-64 rounded-full mx-auto object-cover border-4 border-border/50 hover:border-primary/50 transition-colors duration-300 shadow-lg"
                   />
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-primary/20 to-secondary/20 opacity-0 hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-sky-500/20 via-cyan-400/20 to-emerald-400/20 opacity-0 hover:opacity-100 transition-opacity duration-300" />
                 </div>
               </motion.div>
 

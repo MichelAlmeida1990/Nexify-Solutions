@@ -58,38 +58,38 @@ const Contact: React.FC = () => {
 
   return (
     <section id="contact" className="section-padding bg-background">
-      <div className="container-custom">
+      <div className="container-custom px-2 sm:px-4">
         <motion.div
           ref={ref}
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
         >
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          <h2 className="text-2xl xs:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6">
             Vamos <span className="gradient-text">Conversar</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base xs:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Pronto para transformar sua ideia em realidade? Entre em contato e vamos criar algo incrível juntos.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12">
           {/* Informações de Contato */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="space-y-8"
+            className="space-y-6 md:space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-bold mb-6">Informações de Contato</h3>
-              <p className="text-muted-foreground mb-8">
+              <h3 className="text-xl md:text-2xl font-bold mb-4 md:mb-6">Informações de Contato</h3>
+              <p className="text-muted-foreground mb-6 md:mb-8 text-sm md:text-base">
                 Estou sempre disponível para discutir novos projetos, oportunidades de parceria ou simplesmente para uma conversa sobre tecnologia.
               </p>
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-4 md:space-y-6">
               <div className="flex items-center space-x-4">
                 <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
                   <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -128,9 +128,9 @@ const Contact: React.FC = () => {
               </div>
             </div>
 
-            <div className="pt-6">
-              <h4 className="font-semibold mb-4">Redes Sociais</h4>
-              <div className="flex space-x-4">
+            <div className="pt-4 md:pt-6">
+              <h4 className="font-semibold mb-2 md:mb-4">Redes Sociais</h4>
+              <div className="flex space-x-2 md:space-x-4">
                 <a
                   href={SITE_CONFIG.links.github}
                   target="_blank"
@@ -161,10 +161,10 @@ const Contact: React.FC = () => {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
+                  <label htmlFor="name" className="block text-sm font-medium mb-1 md:mb-2">
                     Nome *
                   </label>
                   <Input
@@ -178,7 +178,7 @@ const Contact: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
+                  <label htmlFor="email" className="block text-sm font-medium mb-1 md:mb-2">
                     Email *
                   </label>
                   <Input
@@ -193,37 +193,38 @@ const Contact: React.FC = () => {
                 </div>
               </div>
 
-              <div>
-                <label htmlFor="phone" className="block text-sm font-medium mb-2">
-                  Telefone
-                </label>
-                <Input
-                  id="phone"
-                  name="phone"
-                  type="tel"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  placeholder="Seu telefone"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                <div>
+                  <label htmlFor="phone" className="block text-sm font-medium mb-1 md:mb-2">
+                    Telefone
+                  </label>
+                  <Input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    placeholder="Seu telefone"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="subject" className="block text-sm font-medium mb-1 md:mb-2">
+                    Assunto *
+                  </label>
+                  <Input
+                    id="subject"
+                    name="subject"
+                    type="text"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    required
+                    placeholder="Qual é o assunto?"
+                  />
+                </div>
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium mb-2">
-                  Assunto *
-                </label>
-                <Input
-                  id="subject"
-                  name="subject"
-                  type="text"
-                  value={formData.subject}
-                  onChange={handleInputChange}
-                  required
-                  placeholder="Qual é o assunto?"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                <label htmlFor="message" className="block text-sm font-medium mb-1 md:mb-2">
                   Mensagem *
                 </label>
                 <Textarea
@@ -240,7 +241,7 @@ const Contact: React.FC = () => {
               <Button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full"
+                className="w-full text-base md:text-lg py-2 md:py-3"
                 size="lg"
               >
                 {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
@@ -250,7 +251,7 @@ const Contact: React.FC = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="p-4 bg-green-50 border border-green-200 rounded-lg text-green-800"
+                  className="p-3 md:p-4 bg-green-50 border border-green-200 rounded-lg text-green-800 text-sm md:text-base"
                 >
                   Mensagem enviada com sucesso! Entrarei em contato em breve.
                 </motion.div>
@@ -260,7 +261,7 @@ const Contact: React.FC = () => {
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="p-4 bg-red-50 border border-red-200 rounded-lg text-red-800"
+                  className="p-3 md:p-4 bg-red-50 border border-red-200 rounded-lg text-red-800 text-sm md:text-base"
                 >
                   Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente.
                 </motion.div>
