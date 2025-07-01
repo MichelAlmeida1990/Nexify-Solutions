@@ -75,8 +75,8 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
               className={cn(
           'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
           isScrolled
-            ? 'bg-gradient-to-r from-sky-500 via-cyan-400 to-emerald-400 backdrop-blur-md border-b border-cyan-300/30 shadow-xl'
-            : 'bg-gradient-to-r from-sky-500 via-cyan-400 to-emerald-400 backdrop-blur-sm',
+            ? 'bg-gradient-to-r from-sky-500/60 via-cyan-400/60 to-emerald-400/60 backdrop-blur-md border-b border-cyan-300/30 shadow-xl'
+            : 'bg-gradient-to-r from-sky-500/60 via-cyan-400/60 to-emerald-400/60 backdrop-blur-sm',
           className
         )}
     >
