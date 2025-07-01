@@ -16,8 +16,8 @@ export interface Service {
   title: string
   description: string
   icon: string
-  features: string[]
-  technologies: string[]
+  features: readonly string[]
+  technologies: readonly string[]
 }
 
 export interface Testimonial {
