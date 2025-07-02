@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
-import { EMAILJS_CONFIG } from '@/lib/emailjs-config'
+import { EMAILJS_CONFIG } from '../lib/emailjs-config'
 
 interface EmailData {
   name: string
